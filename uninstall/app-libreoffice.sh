@@ -1,1 +1,1 @@
-sudo apt remove -y libreoffice
+sudo dnf remove -y libreoffice
