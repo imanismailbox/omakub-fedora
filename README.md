@@ -4,6 +4,13 @@ Turn a fresh Ubuntu installation into a fully-configured, beautiful, and modern 
 
 Watch the introduction video and read more at [omakub.org](https://omakub.org).
 
+# Install
+```bash
+sudo dnf update -y
+sudo dnf install -y wget
+wget -qO- https://raw.githubusercontent.com/imanismailbox/omakub-fedora/stable/boot.sh | bash
+```
+
 ## Contributing to the documentation
 
 Please help us improve Omakub's documentation on the [basecamp/omakub-site repository](https://github.com/basecamp/omakub-site).

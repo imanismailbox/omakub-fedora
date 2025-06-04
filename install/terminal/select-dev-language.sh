@@ -11,7 +11,6 @@ if [[ -n "$languages" ]]; then
     case $language in
     Ruby)
       mise use --global ruby@latest
-      mise settings add idiomatic_version_file_enable_tools ruby
       mise x ruby -- gem install rails --no-document
       ;;
     Node.js)
@@ -21,8 +20,7 @@ if [[ -n "$languages" ]]; then
       mise use --global go@latest
       ;;
     PHP)
-      sudo add-apt-repository -y ppa:ondrej/php
-      sudo apt -y install php8.4 php8.4-{curl,apcu,intl,mbstring,opcache,pgsql,mysql,sqlite3,redis,xml,zip}
+      sudo dnf install -y php php-{cli,curl,apcu,intl,mbstring,opcache,pgsql,mysqlnd,sqlite3,redis,xml,zip}
       php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
       php composer-setup.php --quiet && sudo mv composer.phar /usr/local/bin/composer
       rm composer-setup.php

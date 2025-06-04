@@ -1,1 +1,1 @@
-flatpak uninstall -y flathub org.audacityteam.Audacity
+sudo dnf remove -y audacity

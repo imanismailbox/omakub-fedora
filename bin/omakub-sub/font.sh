@@ -24,12 +24,18 @@ set_font() {
 if [ "$#" -gt 1 ]; then
 	choice=${!#}
 else
-	choice=$(gum choose "Cascadia Mono" "Fira Mono" "JetBrains Mono" "Meslo" "> Change size" "<< Back" --height 8 --header "Choose your programming font")
+	choice=$(gum choose "Cascadia Code" "Cascadia Mono" "Fira Code" "Fira Mono" "JetBrains Mono" "Meslo" "> Change size" "<< Back" --height 8 --header "Choose your programming font")
 fi
 
 case $choice in
+"Cascadia Code")
+	set_font "CaskaydiaCove Nerd Font" "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/CascadiaCode.zip" "ttf"
+	;;
 "Cascadia Mono")
 	set_font "CaskaydiaMono Nerd Font" "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/CascadiaMono.zip" "ttf"
+	;;
+"Fira Code")
+	set_font "FiraCode Nerd Font" "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode.zip" "otf"
 	;;
 "Fira Mono")
 	set_font "FiraMono Nerd Font" "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraMono.zip" "otf"

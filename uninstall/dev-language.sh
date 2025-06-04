@@ -20,8 +20,7 @@ if [[ -n $languages ]]; then
       mise uninstall go@latest
       ;;
     PHP)
-      sudo apt -y purge php8.4 php8.4-{curl,apcu,intl,mbstring,opcache,pgsql,mysql,sqlite3,redis,xml,zip}
-      sudo add-apt-repository -y --remove ppa:ondrej/php
+      sudo dnf remove -y php8.4 php8.4-{curl,apcu,intl,mbstring,opcache,pgsql,mysql,sqlite3,redis,xml,zip}
       sudo rm /usr/local/bin/composer
       ;;
     Python)
@@ -35,7 +34,7 @@ if [[ -n $languages ]]; then
       rustup self uninstall -y
       ;;
     Java)
-      mise uninstall java@latest
+      mise uninnstall java@latest
       ;;
     esac
   done

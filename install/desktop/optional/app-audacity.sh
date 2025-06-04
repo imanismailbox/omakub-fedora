@@ -1,1 +1,1 @@
-flatpak install -y flathub org.audacityteam.Audacity
+sudo dnf install -y audacity

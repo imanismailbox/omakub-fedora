@@ -1,8 +1,9 @@
+dconf write /org/gnome/desktop/interface/accent-color "'$OMAKUB_THEME_COLOR'"
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-gsettings set org.gnome.desktop.interface cursor-theme 'Yaru'
-gsettings set org.gnome.desktop.interface gtk-theme "Yaru-$OMAKUB_THEME_COLOR-dark"
-gsettings set org.gnome.desktop.interface icon-theme "Yaru-$OMAKUB_THEME_COLOR"
-gsettings set org.gnome.desktop.interface accent-color "$OMAKUB_THEME_COLOR" 2>/dev/null || true
+gsettings set org.gnome.desktop.interface cursor-theme 'Adwaita'
+# gsettings set org.gnome.desktop.interface gtk-theme "Adwaita"
+# gsettings set org.gnome.desktop.interface icon-theme "Adwaita-$OMAKUB_THEME_COLOR"
+# gsettings set org.gnome.shell.extensions.user-theme name "Colloid-$OMAKUB_THEME_COLOR-Dark"
 
 BACKGROUND_ORG_PATH="$HOME/.local/share/omakub/themes/$OMAKUB_THEME_BACKGROUND"
 BACKGROUND_DEST_DIR="$HOME/.local/share/backgrounds"

@@ -1,14 +1,8 @@
-sudo apt install -y gnome-shell-extension-manager pipx
+sudo dnf install -y gnome-extensions-app pipx
 pipx install gnome-extensions-cli --system-site-packages
 
-# Turn off default Ubuntu extensions
-gnome-extensions disable tiling-assistant@ubuntu.com
-gnome-extensions disable ubuntu-appindicators@ubuntu.com
-gnome-extensions disable ubuntu-dock@ubuntu.com
-gnome-extensions disable ding@rastersoft.com
-
 # Pause to assure user is ready to accept confirmations
-gum confirm "To install Gnome extensions, you need to accept some confirmations. Ready?"
+gum confirm "To install Gnome extensions, you need to accept some confirmations. Are you ready?"
 
 # Install new extensions
 gext install tactile@lundal.io
@@ -18,6 +12,7 @@ gext install space-bar@luchrioh
 gext install undecorate@sun.wxg@gmail.com
 gext install tophat@fflewddur.github.io
 gext install AlphabeticalAppGrid@stuarthayhurst
+gext install auto-adwaita-colors@celiopy
 
 # Compile gsettings schemas in order to be able to set them
 sudo cp ~/.local/share/gnome-shell/extensions/tactile@lundal.io/schemas/org.gnome.shell.extensions.tactile.gschema.xml /usr/share/glib-2.0/schemas/
